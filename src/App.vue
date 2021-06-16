@@ -25,40 +25,43 @@
           <span @click="listar()"  class="btn btn-success">Listar</span>
         </div>
       </form>
-      <table class="table">
-        <thead>
-        <tr>
-          <th>Nome</th>
-          <th>CPF</th>
-          <th>Data de nascimento</th>
-          <th>Telefone</th>
-          <th>Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="cliente of clientes" :key="cliente.id">
+      <div class="table-responsive">
+        <table class="table  align-middle">
+          <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Data de nascimento</th>
+            <th>Telefone</th>
+            <th class="text-center">Remover</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="cliente of clientes" :key="cliente.id">
 
-          <td>{{ cliente.nome }}</td>
-          <td>{{ cliente.cpf }}</td>
-          <td>{{ cliente.data_nascimento }}</td>
-          <td>{{ cliente.telefone }}</td>
-          <td>
-            <button @click="destroy(cliente.id)" class="bbtn btn-danger"><i class="material-icons">delete_sweep</i>
-            </button>
-          </td>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.cpf }}</td>
+            <td>{{ cliente.data_nascimento }}</td>
+            <td>{{ cliente.telefone }}</td>
+            <td class="text-center">
+              <button @click="destroy(cliente.id)" class="bbtn btn-danger"><i class="material-icons">delete_sweep</i>
+              </button>
+            </td>
 
-        </tr>
-        </tbody>
-      </table>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <ul class="list-group">
+
+      <ul class="list-group mt-2">
         <li class="text-white ist-group-item bg-danger p-1" v-for="(erro, index) of erros" :key="index">
           <b>Erro</b>: {{ erro }}
         </li>
       </ul>
 
       <!-- Button trigger modal -->
-      <section class="bg-light p-5">
+      <section class="bg-light p-5 mt-3">
         <h4>Cadastrar Cliente</h4>
 
         <form class="row g-3" @submit.prevent="salvar">
