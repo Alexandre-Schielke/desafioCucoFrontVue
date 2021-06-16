@@ -14,10 +14,10 @@
 
     <div class="container">
       <form class="row p-4 bg-info" @submit.prevent="filtro">
-        <div class="col-md-4">
+        <div class="col-md-4 mt-1">
           <input type="text" placeholder="Nome" v-model="clientesFiltrado.nome" class="form-control">
         </div>
-        <div class="col-md-4 mt-2">
+        <div class="col-md-4 mt-1">
           <input type="text" placeholder="Cpf" v-model="clientesFiltrado.cpf" class="form-control">
         </div>
         <div class="col-4">
