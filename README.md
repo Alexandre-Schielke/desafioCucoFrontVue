@@ -18,8 +18,8 @@ dentro do projeto rode o seguinte comando <code>npm install</code>
 </p>
 <p>
 
-NOTA: o link da requisiçao pode ser alterado em fica em 'src/services/config.js', por padrão esta setado para 'http://srv106.teste.website/~apicuco' (produção)
-</p>
+NOTA: o link da requisiçao pode ser alterado em fica em 'src/services/config.js', por padrão esta setado para 'http://srv106.teste.website/~apicuco' (produção)</p>
+
 -----------------------------------------------------------------------------------
 obs: os comandos entre essas linhas são somente se a requisição ou a mascara não funcionar
 <h2>Instalação do axios para efetuar as requisições dos campos dos imputs (somente se as requisições não estiverem funcionando)</h2>
