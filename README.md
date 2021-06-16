@@ -1,3 +1,5 @@
+npm install maska
+
 # desafiocuco
 
 ## Project setup
