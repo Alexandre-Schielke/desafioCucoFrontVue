@@ -86,7 +86,7 @@
             <button type="submit" class="btn btn-success">Cadastrar novo cliente</button>
           </div>
         </form>
-        <p>gerador de cpf válido: <a href="https://www.4devs.com.br/gerador_de_cpf" target="_blank" >clique aqui</a></p>
+        <p class="mt-3">gerador de cpf válido: <a href="https://www.4devs.com.br/gerador_de_cpf" target="_blank" >clique aqui</a></p>
       </section>
 
     </div>
