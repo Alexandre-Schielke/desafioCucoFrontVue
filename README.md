@@ -1,9 +1,9 @@
-<h2>Isntalação do axios para efetuar as requisições dos campos dos imputs</h2>
+<h2>Instalação do axios para efetuar as requisições dos campos dos imputs</h2>
 <p>
 	rode o seguinte comando no terminal para instalação (rode dentro da pasta do projeto) <code>npm install axios --save</code>
 </p>
 
-<h2>Isntalação da mascara dos campos dos imputs</h2>
+<h2>Instalação da mascara dos campos dos imputs</h2>
 <p>
 	rode o seguinte comando no terminal pa instalação (rode dentro da pasta do projeto) <code>npm install v-mask</code>
 </p>
