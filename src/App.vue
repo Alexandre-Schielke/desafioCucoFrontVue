@@ -8,17 +8,17 @@
   <div id="app">
     <nav class="mt-5 mb-5">
       <div class="text-center">
-        <h1>Desafio cuco - Clientes</h1>
+        <img src="https://cucohealth.com/wp-content/uploads/2018/08/img-cuco-logo.png">
       </div>
     </nav>
 
-    <div class="container">
-      <form class="row p-4 bg-info" @submit.prevent="filtro">
+    <div class="container bg-white" >
+      <form class="row p-4  rounded d-flex align-items-center" @submit.prevent="filtro" style="background-color: #999999">
         <div class="col-md-4 mt-1">
           <input type="text" placeholder="Nome" v-model="clientesFiltrado.nome" class="form-control">
         </div>
         <div class="col-md-4 mt-1">
-          <input type="text" placeholder="Cpf" v-model="clientesFiltrado.cpf" class="form-control">
+          <input type="text" placeholder="Cpf" v-mask="'###.###.###-##'" v-model="clientesFiltrado.cpf" class="form-control">
         </div>
         <div class="col-4">
           <button type="submit" class="btn btn-success me-2 my-2">Filtrar</button>
@@ -44,8 +44,7 @@
             <td>{{ cliente.data_nascimento }}</td>
             <td>{{ cliente.telefone }}</td>
             <td class="text-center">
-              <button @click="destroy(cliente.id)" class="bbtn btn-danger"><i class="material-icons">delete_sweep</i>
-              </button>
+              <button @click="destroy(cliente.id)" class="bbtn btn-danger border-0 py-1 px-3"><i class="far fa-trash-alt"></i></button>
             </td>
 
           </tr>
