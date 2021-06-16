@@ -129,12 +129,10 @@ export default {
         this.clientes = resp.data.data;
         console.log(resp);
         if (resp.data.sucesso == false) {
-          alert('Erro ao cadastrar');
           this.erros = resp.data.mensagemRetorno
         }
 
         if (resp.data.sucesso == true) {
-          alert('salvo com sucesso');
           this.erros = [];
           // this.listar();
         }
