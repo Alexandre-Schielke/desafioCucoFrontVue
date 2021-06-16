@@ -4,10 +4,8 @@
 <!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 <!--  </div>-->
 <!--</template>-->
-<template>
+<template class="">
   <div id="app">
-
-
     <nav class="mt-5 mb-5">
       <div class="text-center">
         <h1>Desafio cuco - Clientes</h1>
@@ -19,12 +17,12 @@
         <div class="col-md-4">
           <input type="text" placeholder="Nome" v-model="clientesFiltrado.nome" class="form-control">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mt-2">
           <input type="text" placeholder="Cpf" v-model="clientesFiltrado.cpf" class="form-control">
         </div>
         <div class="col-4">
-          <button type="submit" class="btn btn-success me-2">Filtrar dados da tabela</button>
-          <span @click="listar()"  class="btn btn-success">Listar todos os clientes</span>
+          <button type="submit" class="btn btn-success me-2 my-2">Filtrar</button>
+          <span @click="listar()"  class="btn btn-success">Listar</span>
         </div>
       </form>
       <table class="table">
@@ -53,8 +51,8 @@
         </tbody>
       </table>
 
-      <ul>
-        <li v-for="(erro, index) of erros" :key="index">
+      <ul class="list-group">
+        <li class="text-white ist-group-item bg-danger p-1" v-for="(erro, index) of erros" :key="index">
           <b>Erro</b>: {{ erro }}
         </li>
       </ul>
@@ -66,12 +64,12 @@
         <form class="row g-3" @submit.prevent="salvar">
           <div class="col-md-6">
             <label class="form-label">Nome</label>
-            <input type="text" placeholder="Nome" v-model="cliente.nome" required class="form-control">
+            <input type="text" placeholder="Nome" v-model="cliente.nome" class="form-control">
           </div>
 
           <div class="col-md-6">
             <label class="form-label">CPF</label>
-            <input type="text" placeholder="Cpf" v-model="cliente.cpf" class="form-control">
+            <input type="text" placeholder="Cpf" v-mask="'###.###.###-##'" v-model="cliente.cpf" class="form-control">
           </div>
 
           <div class="col-md-6">
@@ -80,8 +78,8 @@
           </div>
 
           <div class="col-md-6">
-            <label class="form-label">Telefon</label>
-            <input type="text" placeholder="telefone" v-model="cliente.telefone" class="form-control">
+            <label class="form-label">Telefone</label>
+            <input type="text" placeholder="telefone" v-mask="'(##) #####-####'" v-model="cliente.telefone" class="form-control">
           </div>
 
           <div class="col-12">
@@ -147,7 +145,6 @@ export default {
         console.log(resp.data);
         this.cliente = {};
         if (resp.data.sucesso == false) {
-          alert('Erro ao cadastrar');
           this.erros = resp.data.mensagemRetorno
         }
 
